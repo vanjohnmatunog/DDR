@@ -1,0 +1,423 @@
+﻿/* GOOGLE FONTS */
+@font-face {
+    font-family: "Quicksand";
+    src: url("../Fonts/Quicksand-SemiBold.ttf") format('truetype');
+}
+@font-face {
+    font-family: "Lato";
+    src: url("../Fonts/Lato-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../Fonts/Poppins-Light.ttf") format('truetype');
+}
+@font-face {
+    font-family: "WorkSans";
+    src: url("../Fonts/WorkSans-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: "Inter";
+    src: url("../Fonts/Inter-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: "Inter-Light";
+    src: url("../Fonts/Inter-Light.ttf") format('truetype');
+}
+
+body {
+    font-family: Poppins;
+}
+
+nav {
+    font-family: Inter;
+}
+
+nav .dropdown-menu{
+     font-family: Inter-Light;
+}
+
+.card .card-header {
+    font-family: Inter;
+}
+
+/*MODIFIED BOOSTRAP CLASS*/
+
+.text-toshiba-red{  color: rgb(230, 30, 30) !important; }
+.text-toshiba-blue{ color: rgb(0, 100, 210) !important; }
+.text-toshiba-orange{ color: rgb(250, 150, 40) !important; }
+.text-toshiba-teal{ color: rgb(80, 190, 190) !important; }
+.text-toshiba-cyan{ color: rgb(100, 175, 255) !important; }
+.text-toshiba-gray{ color: rgb(160, 160, 165) !important; }
+.text-toshiba-yellow{ color: rgb(250, 215, 55) !important; }
+.text-toshiba-lavander{ color: rgb(175, 140, 200) !important; }
+.text-toshiba-dark-orange{  color: rgb(185, 75, 0) !important; }
+.text-toshiba-dark-teal{ color: rgb(0, 117, 128) !important; }
+.text-toshiba-dark-cyan{ color: rgb(38, 92, 128) !important;}
+.text-toshiba-dark-gray{ color: rgb(80, 80, 84) !important; }
+.text-toshiba-dark-yellow { color: rgb(145, 110, 0) !important; }
+.text-toshiba-dark-lavander { color: rgb(100, 64, 128) !important; }
+
+.bg-toshiba-red{ background: rgb(230, 30, 30) !important; }
+.bg-toshiba-blue{ background: rgb(0, 100, 210) !important; }
+.bg-toshiba-orange{ background: rgb(250, 150, 40) !important; }
+.bg-toshiba-teal{ background: rgb(80, 190, 190) !important; }
+.bg-toshiba-cyan{ background: rgb(100, 175, 255) !important; }
+.bg-toshiba-gray{ background: rgb(160, 160, 165) !important; }
+.bg-toshiba-yellow{ background: rgb(250, 215, 55) !important; }
+.bg-toshiba-lavander{ background: rgb(175, 140, 200) !important; }
+.bg-toshiba-dark-orange{ background: rgb(185, 75, 0) !important; }
+.bg-toshiba-dark-teal{ background: rgb(0, 117, 128) !important; }
+.bg-toshiba-dark-cyan{ background: rgb(38, 92, 128) !important; }
+.bg-toshiba-dark-gray{ background: rgb(80, 80, 84) !important; }
+.bg-toshiba-dark-yellow { background: rgb(145, 110, 0) !important; }
+.bg-toshiba-dark-lavander { background: rgb(100, 64, 128) !important; }
+
+.border-toshiba-red{ border-color: rgb(230, 30, 30) !important; }
+.border-toshiba-blue{ border-color: rgb(0, 100, 210) !important; }
+.border-toshiba-orange{ border-color: rgb(250, 150, 40) !important; }
+.border-toshiba-teal{ border-color: rgb(80, 190, 190) !important; }
+.border-toshiba-cyan{ border-color: rgb(100, 175, 255) !important;}
+.border-toshiba-gray{ border-color: rgb(160, 160, 165) !important; }
+.border-toshiba-yellow{ border-color: rgb(250, 215, 55) !important; }
+.border-toshiba-lavander{ border-color: rgb(175, 140, 200) !important; }
+.border-toshiba-dark-orange{ border-color: rgb(185, 75, 0) !important; }
+.border-toshiba-dark-teal{ border-color: rgb(0, 117, 128) !important; }
+.border-toshiba-dark-cyan{ border-color: rgb(38, 92, 128) !important; }
+.border-toshiba-dark-gray{ border-color: rgb(80, 80, 84) !important; }
+.border-toshiba-dark-yellow { border-color: rgb(145, 110, 0) !important; }
+.border-toshiba-dark-lavander { border-color: rgb(100, 64, 128) !important; }
+
+
+.btn-toshiba-blue{color:#fff;background-color:#0064d2;border-color:#0064d2}
+.btn-toshiba-blue:hover{color:#fff;background-color:#0059B8;border-color:#0059B8}
+.btn-toshiba-blue:focus,.btn-toshiba-blue.focus{box-shadow:0 0 0 .2rem rgb(0, 100, 210)}
+.btn-toshiba-blue.disabled,.btn-primary:disabled{color:#fff;background-color:#0059B8;border-color:#0059B8}
+.btn-toshiba-blue:not(:disabled):not(.disabled):active,.btn-toshiba-blue:not(:disabled):not(.disabled).active,.show>.btn-toshiba-blue.dropdown-toggle{color:#fff;background-color:#0064d2;border-color:#0064d2}
+.btn-toshiba-blue:not(:disabled):not(.disabled):active:focus,.btn-toshiba-blue:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-blue.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(0, 100, 210)}
+
+.btn-toshiba-outline-blue{color:#0064d2;background-color:white;background-image:none;border-color:#0064d2}
+.btn-toshiba-outline-blue:hover{color:#fff;background-color:#0064d2;border-color:#0064d2}
+.btn-toshiba-outline-blue:focus,.btn-toshiba-outline-blue.focus{box-shadow:0 0 0 .2rem #0064d2}
+.btn-toshiba-outline-blue.disabled,.btn-toshiba-outline-blue:disabled{color:#0064d2;background-color:transparent}
+.btn-toshiba-outline-blue:not(:disabled):not(.disabled):active,.btn-toshiba-outline-blue:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-blue.dropdown-toggle{color:#fff;background-color:#0064d2;border-color:#0064d2}
+.btn-toshiba-outline-blue:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-blue:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-blue.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #0064d2}
+
+
+.btn-toshiba-red{color:#fff;background-color:#E61E1E;border-color:#E61E1E}
+.btn-toshiba-red:hover{color:#fff;background-color:#CA1616;border-color:#CA1616}
+.btn-toshiba-red:focus,.btn-toshiba-red.focus{box-shadow:0 0 0 .2rem rgb(230, 30, 30)}
+.btn-toshiba-red.disabled,.btn-primary:disabled{color:#fff;background-color:#CA1616;border-color:#CA1616}
+.btn-toshiba-red:not(:disabled):not(.disabled):active,.btn-toshiba-red:not(:disabled):not(.disabled).active,.show>.btn-toshiba-red.dropdown-toggle{color:#fff;background-color:#E61E1E;border-color:#E61E1E}
+.btn-toshiba-red:not(:disabled):not(.disabled):active:focus,.btn-toshiba-red:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-red.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(230, 30, 30)}
+
+.btn-toshiba-outline-red{color:#E61E1E;background-color:white;background-image:none;border-color:#E61E1E}
+.btn-toshiba-outline-red:hover{color:#fff;background-color:#E61E1E;border-color:#E61E1E}
+.btn-toshiba-outline-red:focus,.btn-toshiba-outline-red.focus{box-shadow:0 0 0 .2rem #E61E1E}
+.btn-toshiba-outline-red.disabled,.btn-toshiba-outline-red:disabled{color:#E61E1E;background-color:transparent}
+.btn-toshiba-outline-red:not(:disabled):not(.disabled):active,.btn-toshiba-outline-red:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-red.dropdown-toggle{color:#fff;background-color:#E61E1E;border-color:#E61E1E}
+.btn-toshiba-outline-red:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-red:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-red.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #E61E1E}
+
+
+.btn-toshiba-orange{color:#fff;background-color:#fa9628;border-color:#fa9628}
+.btn-toshiba-orange:hover{color:#fff;background-color:#e88b25;border-color:#e88b25}
+.btn-toshiba-orange:focus,.btn-toshiba-orange.focus{box-shadow:0 0 0 .2rem rgba(160, 98, 31, 0.66)}
+.btn-toshiba-orange.disabled,.btn-orange:disabled{color:#fff;background-color:#b06c21;border-color:#b06c21}
+.btn-toshiba-orange:not(:disabled):not(.disabled):active,.btn-toshiba-orange:not(:disabled):not(.disabled).active,.show>.btn-toshiba-orange.dropdown-toggle{color:#fff;background-color:#fa9628;border-color:#fa9628}
+.btn-toshiba-orange:not(:disabled):not(.disabled):active:focus,.btn-toshiba-orange:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-orange.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(160, 98, 31, 0.66)}
+
+.btn-toshiba-outline-orange{color:#fa9628;background-color:white;background-image:none;border-color:#fa9628}
+.btn-toshiba-outline-orange:hover{color:#fff;background-color:#fa9628;border-color:#fa9628}
+.btn-toshiba-outline-orange:focus,.btn-toshiba-outline-orange.focus{box-shadow:0 0 0 .2rem #fa9628}
+.btn-toshiba-outline-orange.disabled,.btn-toshiba-outline-orange:disabled{color:#fa9628;background-color:transparent}
+.btn-toshiba-outline-orange:not(:disabled):not(.disabled):active,.btn-toshiba-outline-orange:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-orange.dropdown-toggle{color:#fff;background-color:#fa9628;border-color:#fa9628}
+.btn-toshiba-outline-orange:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-orange:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-orange.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #fa9628}
+
+
+.btn-toshiba-teal{color:#fff;background-color:#50BEBE;border-color:#50BEBE}
+.btn-toshiba-teal:hover{color:#fff;background-color:#42B3B3;border-color:#42B3B3}
+.btn-toshiba-teal:focus,.btn-toshiba-teal.focus{box-shadow:0 0 0 .2rem rgb(80, 190, 190)}
+.btn-toshiba-teal.disabled,.btn-primary:disabled{color:#fff;background-color:#42B3B3;border-color:#42B3B3}
+.btn-toshiba-teal:not(:disabled):not(.disabled):active,.btn-toshiba-teal:not(:disabled):not(.disabled).active,.show>.btn-toshiba-teal.dropdown-toggle{color:#fff;background-color:#50BEBE;border-color:#50BEBE}
+.btn-toshiba-teal:not(:disabled):not(.disabled):active:focus,.btn-toshiba-teal:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-teal.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(80, 190, 190)}
+
+.btn-toshiba-outline-teal{color:#50BEBE;background-color:white;background-image:none;border-color:#50BEBE}
+.btn-toshiba-outline-teal:hover{color:#fff;background-color:#50BEBE;border-color:#50BEBE}
+.btn-toshiba-outline-teal:focus,.btn-toshiba-outline-teal.focus{box-shadow:0 0 0 .2rem #50BEBE}
+.btn-toshiba-outline-teal.disabled,.btn-toshiba-outline-teal:disabled{color:#50BEBE;background-color:transparent}
+.btn-toshiba-outline-teal:not(:disabled):not(.disabled):active,.btn-toshiba-outline-teal:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-teal.dropdown-toggle{color:#fff;background-color:#50BEBE;border-color:#50BEBE}
+.btn-toshiba-outline-teal:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-teal:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-teal.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #50BEBE}
+
+
+.btn-toshiba-cyan{color:#fff;background-color:#64AFFF;border-color:#64AFFF}
+.btn-toshiba-cyan:hover{color:#fff;background-color:#47A0FF;border-color:#47A0FF}
+.btn-toshiba-cyan:focus,.btn-toshiba-cyan.focus{box-shadow:0 0 0 .2rem rgb(100, 175, 255)}
+.btn-toshiba-cyan.disabled,.btn-primary:disabled{color:#fff;background-color:#47A0FF;border-color:#47A0FF}
+.btn-toshiba-cyan:not(:disabled):not(.disabled):active,.btn-toshiba-cyan:not(:disabled):not(.disabled).active,.show>.btn-toshiba-cyan.dropdown-toggle{color:#fff;background-color:#64AFFF;border-color:#64AFFF}
+.btn-toshiba-cyan:not(:disabled):not(.disabled):active:focus,.btn-toshiba-cyan:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-cyan.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(100, 175, 255)}
+
+.btn-toshiba-outline-cyan{color:#64AFFF;background-color:white;background-image:none;border-color:#64AFFF}
+.btn-toshiba-outline-cyan:hover{color:#fff;background-color:#64AFFF;border-color:#64AFFF}
+.btn-toshiba-outline-cyan:focus,.btn-toshiba-outline-cyan.focus{box-shadow:0 0 0 .2rem #64AFFF}
+.btn-toshiba-outline-cyan.disabled,.btn-toshiba-outline-cyan:disabled{color:#64AFFF;background-color:transparent}
+.btn-toshiba-outline-cyan:not(:disabled):not(.disabled):active,.btn-toshiba-outline-cyan:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-cyan.dropdown-toggle{color:#fff;background-color:#64AFFF;border-color:#64AFFF}
+.btn-toshiba-outline-cyan:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-cyan:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-cyan.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #64AFFF}
+
+.btn-toshiba-gray{color:#fff;background-color:#a0a0a5;border-color:#a0a0a5}
+.btn-toshiba-gray:hover{color:#fff;background-color:#8b8b92;border-color:#8b8b92}
+.btn-toshiba-gray:focus,.btn-toshiba-gray.focus{box-shadow:0 0 0 .2rem rgb(160, 160, 165)}
+.btn-toshiba-gray.disabled,.btn-primary:disabled{color:#fff;background-color:#8b8b92;border-color:#8b8b92}
+.btn-toshiba-gray:not(:disabled):not(.disabled):active,.btn-toshiba-gray:not(:disabled):not(.disabled).active,.show>.btn-toshiba-gray.dropdown-toggle{color:#fff;background-color:#a0a0a5;border-color:#a0a0a5}
+.btn-toshiba-gray:not(:disabled):not(.disabled):active:focus,.btn-toshiba-gray:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-gray.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(160, 160, 165)}
+
+.btn-toshiba-outline-gray{color:#a0a0a5;background-color:white;background-image:none;border-color:#a0a0a5}
+.btn-toshiba-outline-gray:hover{color:#fff;background-color:#a0a0a5;border-color:#a0a0a5}
+.btn-toshiba-outline-gray:focus,.btn-toshiba-outline-gray.focus{box-shadow:0 0 0 .2rem #a0a0a5}
+.btn-toshiba-outline-gray.disabled,.btn-toshiba-outline-gray:disabled{color:#a0a0a5;background-color:transparent}
+.btn-toshiba-outline-gray:not(:disabled):not(.disabled):active,.btn-toshiba-outline-gray:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-gray.dropdown-toggle{color:#fff;background-color:#a0a0a5;border-color:#a0a0a5}
+.btn-toshiba-outline-gray:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-gray:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-gray.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #a0a0a5}
+
+.btn-toshiba-yellow{color:#000;background-color:#fad737;border-color:#fad737}
+.btn-toshiba-yellow:hover{color:#000;background-color:#f9ce10;border-color:#f9ce10}
+.btn-toshiba-yellow:focus,.btn-toshiba-yellow.focus{box-shadow:0 0 0 .2rem rgb(250, 215, 55)}
+.btn-toshiba-yellow.disabled,.btn-primary:disabled{color:#000;background-color:#f9ce10;border-color:#f9ce10}
+.btn-toshiba-yellow:not(:disabled):not(.disabled):active,.btn-toshiba-yellow:not(:disabled):not(.disabled).active,.show>.btn-toshiba-yellow.dropdown-toggle{color:#000;background-color:#fad737;border-color:#fad737}
+.btn-toshiba-yellow:not(:disabled):not(.disabled):active:focus,.btn-toshiba-yellow:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-yellow.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(250, 215, 55)}
+
+.btn-toshiba-outline-yellow{color:#fad737;background-color:white;background-image:none;border-color:#fad737}
+.btn-toshiba-outline-yellow:hover{color:#000;background-color:#fad737;border-color:#fad737}
+.btn-toshiba-outline-yellow:focus,.btn-toshiba-outline-yellow.focus{box-shadow:0 0 0 .2rem #fad737}
+.btn-toshiba-outline-yellow.disabled,.btn-toshiba-outline-yellow:disabled{color:#fad737;background-color:transparent}
+.btn-toshiba-outline-yellow:not(:disabled):not(.disabled):active,.btn-toshiba-outline-yellow:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-yellow.dropdown-toggle{color:#000;background-color:#fad737;border-color:#fad737}
+.btn-toshiba-outline-yellow:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-yellow:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-yellow.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #fad737}
+
+.btn-toshiba-lavander{color:#fff;background-color:#af8cc8;border-color:#af8cc8}
+.btn-toshiba-lavander:hover{color:#fff;background-color:#9f75bd;border-color:#9f75bd}
+.btn-toshiba-lavander:focus,.btn-toshiba-lavander.focus{box-shadow:0 0 0 .2rem rgb(175, 140, 200)}
+.btn-toshiba-lavander.disabled,.btn-primary:disabled{color:#fff;background-color:#9f75bd;border-color:#9f75bd}
+.btn-toshiba-lavander:not(:disabled):not(.disabled):active,.btn-toshiba-lavander:not(:disabled):not(.disabled).active,.show>.btn-toshiba-lavander.dropdown-toggle{color:#fff;background-color:#af8cc8;border-color:#af8cc8}
+.btn-toshiba-lavander:not(:disabled):not(.disabled):active:focus,.btn-toshiba-lavander:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-lavander.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(175, 140, 200)}
+
+.btn-toshiba-outline-lavander{color:#af8cc8;background-color:white;background-image:none;border-color:#af8cc8}
+.btn-toshiba-outline-lavander:hover{color:#fff;background-color:#af8cc8;border-color:#af8cc8}
+.btn-toshiba-outline-lavander:focus,.btn-toshiba-outline-lavander.focus{box-shadow:0 0 0 .2rem #af8cc8}
+.btn-toshiba-outline-lavander.disabled,.btn-toshiba-outline-lavander:disabled{color:#af8cc8;background-color:transparent}
+.btn-toshiba-outline-lavander:not(:disabled):not(.disabled):active,.btn-toshiba-outline-lavander:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-lavander.dropdown-toggle{color:#fff;background-color:#af8cc8;border-color:#af8cc8}
+.btn-toshiba-outline-lavander:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-lavander:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-lavander.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #af8cc8}
+
+.btn-toshiba-dark-orange{color:#fff;background-color:#b94b00;border-color:#b94b00}
+.btn-toshiba-dark-orange:hover{color:#fff;background-color:#8f3900;border-color:#8f3900}
+.btn-toshiba-dark-orange:focus,.btn-toshiba-dark-orange.focus{box-shadow:0 0 0 .2rem rgb(185, 75, 0)}
+.btn-toshiba-dark-orange.disabled,.btn-primary:disabled{color:#fff;background-color:#8f3900;border-color:#8f3900}
+.btn-toshiba-dark-orange:not(:disabled):not(.disabled):active,.btn-toshiba-dark-orange:not(:disabled):not(.disabled).active,.show>.btn-toshiba-dark-orange.dropdown-toggle{color:#fff;background-color:#b94b00;border-color:#b94b00}
+.btn-toshiba-dark-orange:not(:disabled):not(.disabled):active:focus,.btn-toshiba-dark-orange:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-dark-orange.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(185, 75, 0)}
+
+.btn-toshiba-outline-dark-orange{color:#b94b00;background-color:white;background-image:none;border-color:#b94b00}
+.btn-toshiba-outline-dark-orange:hover{color:#fff;background-color:#b94b00;border-color:#b94b00}
+.btn-toshiba-outline-dark-orange:focus,.btn-toshiba-outline-dark-orange.focus{box-shadow:0 0 0 .2rem #b94b00}
+.btn-toshiba-outline-dark-orange.disabled,.btn-toshiba-outline-dark-orange:disabled{color:#b94b00;background-color:transparent}
+.btn-toshiba-outline-dark-orange:not(:disabled):not(.disabled):active,.btn-toshiba-outline-dark-orange:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-dark-orange.dropdown-toggle{color:#fff;background-color:#b94b00;border-color:#b94b00}
+.btn-toshiba-outline-dark-orange:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-dark-orange:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-dark-orange.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #b94b00}
+
+.btn-toshiba-dark-teal{color:#fff;background-color:#007580;border-color:#007580}
+.btn-toshiba-dark-teal:hover{color:#fff;background-color:#005e66;border-color:#005e66}
+.btn-toshiba-dark-teal:focus,.btn-toshiba-dark-teal.focus{box-shadow:0 0 0 .2rem rgb(0, 117, 128)}
+.btn-toshiba-dark-teal.disabled,.btn-primary:disabled{color:#fff;background-color:#005e66;border-color:#005e66}
+.btn-toshiba-dark-teal:not(:disabled):not(.disabled):active,.btn-toshiba-dark-teal:not(:disabled):not(.disabled).active,.show>.btn-toshiba-dark-teal.dropdown-toggle{color:#fff;background-color:#007580;border-color:#007580}
+.btn-toshiba-dark-teal:not(:disabled):not(.disabled):active:focus,.btn-toshiba-dark-teal:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-dark-teal.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(0, 117, 128)}
+
+.btn-toshiba-outline-dark-teal{color:#007580;background-color:white;background-image:none;border-color:#007580}
+.btn-toshiba-outline-dark-teal:hover{color:#fff;background-color:#007580;border-color:#007580}
+.btn-toshiba-outline-dark-teal:focus,.btn-toshiba-outline-dark-teal.focus{box-shadow:0 0 0 .2rem #007580}
+.btn-toshiba-outline-dark-teal.disabled,.btn-toshiba-outline-dark-teal:disabled{color:#007580;background-color:transparent}
+.btn-toshiba-outline-dark-teal:not(:disabled):not(.disabled):active,.btn-toshiba-outline-dark-teal:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-dark-teal.dropdown-toggle{color:#fff;background-color:#007580;border-color:#007580}
+.btn-toshiba-outline-dark-teal:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-dark-teal:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-dark-teal.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #007580}
+
+.btn-toshiba-dark-cyan{color:#fff;background-color:#265C80;border-color:#265C80}
+.btn-toshiba-dark-cyan:hover{color:#fff;background-color:#214f6e;border-color:#214f6e}
+.btn-toshiba-dark-cyan:focus,.btn-toshiba-dark-cyan.focus{box-shadow:0 0 0 .2rem rgb(38, 92, 128)}
+.btn-toshiba-dark-cyan.disabled,.btn-primary:disabled{color:#fff;background-color:#214f6e;border-color:#214f6e}
+.btn-toshiba-dark-cyan:not(:disabled):not(.disabled):active,.btn-toshiba-dark-cyan:not(:disabled):not(.disabled).active,.show>.btn-toshiba-dark-cyan.dropdown-toggle{color:#fff;background-color:#265C80;border-color:#265C80}
+.btn-toshiba-dark-cyan:not(:disabled):not(.disabled):active:focus,.btn-toshiba-dark-cyan:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-dark-cyan.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(38, 92, 128)}
+
+.btn-toshiba-outline-dark-cyan{color:#265C80;background-color:white;background-image:none;border-color:#265C80}
+.btn-toshiba-outline-dark-cyan:hover{color:#fff;background-color:#265C80;border-color:#265C80}
+.btn-toshiba-outline-dark-cyan:focus,.btn-toshiba-outline-dark-cyan.focus{box-shadow:0 0 0 .2rem #265C80}
+.btn-toshiba-outline-dark-cyan.disabled,.btn-toshiba-outline-dark-cyan:disabled{color:#265C80;background-color:transparent}
+.btn-toshiba-outline-dark-cyan:not(:disabled):not(.disabled):active,.btn-toshiba-outline-dark-cyan:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-dark-cyan.dropdown-toggle{color:#fff;background-color:#265C80;border-color:#265C80}
+.btn-toshiba-outline-dark-cyan:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-dark-cyan:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-dark-cyan.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #265C80}
+
+.btn-toshiba-dark-gray{color:#fff;background-color:#505054;border-color:#505054}
+.btn-toshiba-dark-gray:hover{color:#fff;background-color:#3c3c3e;border-color:#3c3c3e}
+.btn-toshiba-dark-gray:focus,.btn-toshiba-dark-gray.focus{box-shadow:0 0 0 .2rem rgb(80, 80, 84)}
+.btn-toshiba-dark-gray.disabled,.btn-primary:disabled{color:#fff;background-color:#3c3c3e;border-color:#3c3c3e}
+.btn-toshiba-dark-gray:not(:disabled):not(.disabled):active,.btn-toshiba-dark-gray:not(:disabled):not(.disabled).active,.show>.btn-toshiba-dark-gray.dropdown-toggle{color:#fff;background-color:#505054;border-color:#505054}
+.btn-toshiba-dark-gray:not(:disabled):not(.disabled):active:focus,.btn-toshiba-dark-gray:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-dark-gray.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(80, 80, 84)}
+
+.btn-toshiba-outline-dark-gray{color:#505054;background-color:white;background-image:none;border-color:#505054}
+.btn-toshiba-outline-dark-gray:hover{color:#fff;background-color:#505054;border-color:#505054}
+.btn-toshiba-outline-dark-gray:focus,.btn-toshiba-outline-dark-gray.focus{box-shadow:0 0 0 .2rem #505054}
+.btn-toshiba-outline-dark-gray.disabled,.btn-toshiba-outline-dark-gray:disabled{color:#505054;background-color:transparent}
+.btn-toshiba-outline-dark-gray:not(:disabled):not(.disabled):active,.btn-toshiba-outline-dark-gray:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-dark-gray.dropdown-toggle{color:#fff;background-color:#505054;border-color:#505054}
+.btn-toshiba-outline-dark-gray:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-dark-gray:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-dark-gray.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #505054}
+
+.btn-toshiba-dark-yellow{color:#fff;background-color:#916E00;border-color:#916E00}
+.btn-toshiba-dark-yellow:hover{color:#fff;background-color:#664e00;border-color:#664e00}
+.btn-toshiba-dark-yellow:focus,.btn-toshiba-dark-yellow.focus{box-shadow:0 0 0 .2rem rgb(145, 110, 0)}
+.btn-toshiba-dark-yellow.disabled,.btn-primary:disabled{color:#fff;background-color:#664e00;border-color:#664e00}
+.btn-toshiba-dark-yellow:not(:disabled):not(.disabled):active,.btn-toshiba-dark-yellow:not(:disabled):not(.disabled).active,.show>.btn-toshiba-dark-yellow.dropdown-toggle{color:#fff;background-color:#916E00;border-color:#916E00}
+.btn-toshiba-dark-yellow:not(:disabled):not(.disabled):active:focus,.btn-toshiba-dark-yellow:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-dark-yellow.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(145, 110, 0)}
+
+.btn-toshiba-outline-dark-yellow{color:#916E00;background-color:white;background-image:none;border-color:#916E00}
+.btn-toshiba-outline-dark-yellow:hover{color:#fff;background-color:#916E00;border-color:#916E00}
+.btn-toshiba-outline-dark-yellow:focus,.btn-toshiba-outline-dark-yellow.focus{box-shadow:0 0 0 .2rem #916E00}
+.btn-toshiba-outline-dark-yellow.disabled,.btn-toshiba-outline-dark-yellow:disabled{color:#916E00;background-color:transparent}
+.btn-toshiba-outline-dark-yellow:not(:disabled):not(.disabled):active,.btn-toshiba-outline-dark-yellow:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-dark-yellow.dropdown-toggle{color:#fff;background-color:#916E00;border-color:#916E00}
+.btn-toshiba-outline-dark-yellow:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-dark-yellow:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-dark-yellow.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #916E00}
+
+
+.btn-toshiba-dark-lavander{color:#fff;background-color:#644080;border-color:#644080}
+.btn-toshiba-dark-lavander:hover{color:#fff;background-color:#55376d;border-color:#55376d}
+.btn-toshiba-dark-lavander:focus,.btn-toshiba-dark-lavander.focus{box-shadow:0 0 0 .2rem rgb(100, 64, 128)}
+.btn-toshiba-dark-lavander.disabled,.btn-primary:disabled{color:#fff;background-color:#55376d;border-color:#55376d}
+.btn-toshiba-dark-lavander:not(:disabled):not(.disabled):active,.btn-toshiba-dark-lavander:not(:disabled):not(.disabled).active,.show>.btn-toshiba-dark-lavander.dropdown-toggle{color:#fff;background-color:#644080;border-color:#644080}
+.btn-toshiba-dark-lavander:not(:disabled):not(.disabled):active:focus,.btn-toshiba-dark-lavander:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-dark-lavander.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgb(100, 64, 128)}
+
+.btn-toshiba-outline-dark-lavander{color:#644080;background-color:white;background-image:none;border-color:#644080}
+.btn-toshiba-outline-dark-lavander:hover{color:#fff;background-color:#644080;border-color:#644080}
+.btn-toshiba-outline-dark-lavander:focus,.btn-toshiba-outline-dark-lavander.focus{box-shadow:0 0 0 .2rem #644080}
+.btn-toshiba-outline-dark-lavander.disabled,.btn-toshiba-outline-dark-lavander:disabled{color:#644080;background-color:transparent}
+.btn-toshiba-outline-dark-lavander:not(:disabled):not(.disabled):active,.btn-toshiba-outline-dark-lavander:not(:disabled):not(.disabled).active,.show>.btn-toshiba-outline-dark-lavander.dropdown-toggle{color:#fff;background-color:#644080;border-color:#644080}
+.btn-toshiba-outline-dark-lavander:not(:disabled):not(.disabled):active:focus,.btn-toshiba-outline-dark-lavander:not(:disabled):not(.disabled).active:focus,.show>.btn-toshiba-outline-dark-lavander.dropdown-toggle:focus{box-shadow:0 0 0 .2rem #644080}
+/* END */
+
+
+.dropdown-menu .dropdown-toggle:after {
+    border-top: .3em solid transparent;
+    border-right: 0;
+    border-bottom: .3em solid transparent;
+    border-left: .3em solid;
+}
+
+.dropdown-menu .dropdown-menu {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.nav-item .submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+}
+
+.nav-item .submenu-left {
+    right: 100%;
+    left: auto;
+}
+
+.dropdown-menu > li:hover {
+    background-color: rgb(0, 100, 210);
+}
+
+.dropdown-menu .submenu > li:hover {
+    background-color: white;
+}
+
+
+.dropdown-menu li > .dropdown-item:hover{
+    background-color: rgb(0, 100, 210);
+    color: white;
+}
+
+.dropdown-menu > li:hover > .submenu {
+    /*background-color: rgb(0, 100, 210);*/
+    display: block;
+}
+
+/**************CHECKBOX***************/
+/* The container */
+.chkContainer {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.chkContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    background-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.chkContainer:hover input ~ .checkmark {
+    background-color: rgb(160, 160, 165);
+}
+
+/* When the checkbox is checked, add a blue background */
+.chkContainer input:checked ~ .checkmark {
+    background-color: rgb(0, 100, 210);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.chkContainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.chkContainer .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 6px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* CUSTOM STYLES */
+.text-custom-royal-blue{ color: #0a1047; }
+.text-custom-sapphire-blue{ color: #005F92; }
+.text-custom-pewter-blue{ color: #99B3C0; }
+.text-custom-light-gray{ color: #CCCCCC; }
+
+.bg-custom-royal-blue{ background-color: #0a1047; }
+.bg-custom-sapphire-blue{ background-color: #005F92; }
+.bg-custom-pewter-blue{ background-color: #99B3C0; }
+.bg-custom-light-gray{ background-color: #CCCCCC; }
+
+.border-custom-royal-blue{ border-color: #0a1047 !important; }
+.border-custom-sapphire-blue{ border-color: #005F92 !important; }
+.border-custom-pewter-blue{ border-color: #99B3C0 !important; }
+.border-custom-light-gray{ border-color: #CCCCCC !important; }

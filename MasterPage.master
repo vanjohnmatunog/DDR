@@ -1,0 +1,491 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Damage Report Database</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=7,8,9,10,edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <%--<link href="<%= Page.ResolveUrl("~/Media/CSS/AlertMessage.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/bootstrap.min.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/fontawesome-all.min.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/footable.min.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/FontAwesome.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/Default.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/jquery-ui.min.css") %>" rel="stylesheet" />--%>
+
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/AlertMessage.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/bootstrap.min.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/FontAwesome.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/Default.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/footable.min.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/jquery.dataTables.min.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/jquery-ui.min.css") %>" rel="stylesheet" />
+    <link href="<%= Page.ResolveUrl("~/Media/CSS/site.css") %>" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">        
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <%--<script type="text/javascript" src="<%= Page.ResolveUrl("~/Media/JavaScript/jquery-2.2.4.min.js") %>" ></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl("~/Media/JavaScript/popper.min.js") %>" ></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl("~/Media/JavaScript/fontawesome-all.min.js") %>" ></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl("~/Media/JavaScript/fontawesome.js") %>" ></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl("~/Media/JavaScript/bootstrap.min.js") %>" ></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl("~/Media/JavaScript/footable.min.js") %>" ></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl("~/Media/JavaScript/RightClick.js") %>" ></script>
+    <script type="text/javascript" src="<%= Page.ResolveUrl("~/Media/JavaScript/jquery-ui.min.js") %>"></script>--%>
+
+    
+    <script type="text/javascript">
+        function OpenWindow(link) {
+            window.open(link, null, 'toolbar=1,status=1,location=1,menubar=1,directories=1,resizable=1,scrollbars=1');
+        }
+
+        function changeColor(obj) {
+            document.getElementById(obj).className = 'selected';
+            document.getElementById(obj).style.color = "#fff";
+            document.getElementById(obj).style.letterSpacing = "3px";
+            return false;      
+        }
+
+        function MenuHide(Menu) {
+            document.getElementById(Menu).style.visibility = "hidden";
+        }
+
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode == 13) {
+                return false;
+            }
+            else if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function isNumberKeywithDash(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            var charStr = String.fromCharCode(charCode);
+            if (charCode == 13) {
+                return false;
+            }
+            else if (charCode > 31 && (charCode < 48 || charCode > 57) && (charStr !== "-")) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function isNumberKeywithDot(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            var charStr = String.fromCharCode(charCode);
+            if (charCode == 13) {
+                return false;
+            }
+            else if (charCode > 31 && (charCode < 48 || charCode > 57) && (charStr !== ".")) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function isNumberKeywithQuote(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            var charStr = String.fromCharCode(charCode);
+            if (charCode == 13) {
+                return false;
+            }
+            else if (charCode > 31 && (charCode < 48 || charCode > 57) && (charCode !== 39 && charCode !== 34)) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        function preventInput(e) {
+            var evt = e || window.event;
+            if (evt) {
+                var keyCode = evt.charCode || evt.keyCode;
+                for (i = 0; i <= 256; i++) {
+                    if (keyCode === i) {
+                        if (evt.preventDefault) {
+                            evt.preventDefault();
+                        } else {
+                            evt.returnValue = false;
+                        }
+                    }
+                }
+            }
+        }
+        function checkTextAreaMaxLength(textBox, e) {
+            var maxLength = 255;
+            if (!checkSpecialKeys(e)) {
+                if (textBox.value.length > maxLength - 1) {
+                    e.returnValue = false;
+                }
+            }
+        }
+        function checkSpecialKeys(e) {
+            if (e.keyCode != 8 && e.keyCode != 46 && e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.keyCode != 40)
+                return false;
+            else
+                return true;
+        }
+
+        function button_click(objTextBox, objBtnID) {
+            if (window.event.keyCode == 13) {
+                document.getElementById(objBtnID).focus();
+                document.getElementById(objBtnID).click();
+            }
+        }
+
+        function pageLoad() {
+            $('.hasDate').unbind();
+            $('.hasDate').datepicker();
+
+            //$('.datepicker').unbind();
+            //$('.datepicker').datepicker({ dateFormat: 'd-M-y' });
+
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+        }
+    </script> 
+
+    
+</head>
+<body>
+    <form id="form1" runat="server">  
+
+        <ajax:ToolkitScriptManager ID="ScriptManager1" runat="server" CombineScripts="false"></ajax:ToolkitScriptManager>     
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-right" >
+                    <div id="TimeDisplay" 
+                        style="color:#999999; font-size: small; font-family: 'Verdana'; font-weight: normal;">
+                        <script type="text/javascript">
+                        <!-- Hide this code from non-JavaScript browsers
+                            function NowSplit() {
+                            Now_Y=Now.getYear();
+                            if (Now_Y < 70)   { Now_Y=Now_Y*1+2000; }
+                            if (Now_Y < 1000) { Now_Y=Now_Y*1+1900; }
+                            Now_Yf=Now.getFullYear();               // should match Now_Y
+                            Now_M=Now.getMonth();                   // Jan-Dec = 0-11
+                            Now_D=Now.getDate();                    // 1-31
+                            Now_H=Now.getHours();                   // 0-23
+                            Now_N=Now.getMinutes();                 // 0-59
+                            Now_S=Now.getSeconds();                 // 0-59
+                            Now_U=Now.getMilliseconds();            // 0-999
+                            Now_T=Now.getTime();                    // miliseconds since 1970-01-01
+                            Now_O=Now.getTimezoneOffset();          // in minutes
+                            Now_W=GetDay(Now);                      // weekday: Sun-Sat = 0-6
+                            Now_J=                                  // day of year (Julian day)
+                                Math.round((                          // ...account for DST
+                                (new Date(Now_Y,Now_M,Now_D))         // ...most recent midnight
+                                - (new Date(Now_Y,0,0)))              // ...Dec. 31st midnight
+                                /86400000);                           // ...mili-seconds per day
+            
+                            Now_M1=Now_M*1+1;                       // Jan-Dec = 1-12
+            
+                            Now_A='AM';
+                            Now_H12=Now_H;
+                            if (Now_H12 >= 12) {
+                                Now_A='PM';
+                                Now_H12=Now_H12-12;
+                            }
+                            if (Now_H12 == 0) { Now_H12=12; }
+            
+                            if (Now_M < 10)   { Now_M='0'+Now_M; }  // leading zero?
+                            if (Now_M1 < 10)  { Now_M1='0'+Now_M1; }
+                            if (Now_D < 10)   { Now_D='0'+Now_D; }
+                            if (Now_H < 10)   { Now_H='0'+Now_H; }
+                            if (Now_H12 < 10) { Now_H12='0'+Now_H12; }
+                            if (Now_N < 10)   { Now_N='0'+Now_N; }
+                            if (Now_S < 10)   { Now_S='0'+Now_S; }
+                            if (Now_U < 10)   { Now_U='0'+Now_U; }
+                            if (Now_U < 100)  { Now_U='0'+Now_U; }
+            
+                            Month_Names=new Array('January', 'February', 'March', 'April', 'May',
+                                'June', 'July', 'August','September', 'October', 'November', 'December');
+                            Day_Names=new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday',
+                                'Thursday', 'Friday', 'Saturday');
+                            Month_Name=Month_Names[Now_M*1];
+                            Day_Name=Day_Names[Now_W];
+            
+                            return true;
+                            } // NowSplit
+          
+                            function GetDay(DA_Year,DA_Month,DA_Date) {
+                            if (!DA_Month) {
+                                DA_Now=new Date(DA_Year);
+                                DA_Year=DA_Now.getYear();
+                                if (DA_Year < 70)   { DA_Year=DA_Year*1+2000; }
+                                if (DA_Year < 1000) { DA_Year=DA_Year*1+1900; }
+                                DA_Month=DA_Now.getMonth()+1;         // Jan-Dec = 1-12
+                                DA_Date=DA_Now.getDate();
+                            }
+                            DA_Month-=1;                            // Jan-Dec = 0-11
+                            DA_Offsets=new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+                            if ((DA_Year%400 == 0)
+                            ||  ((DA_Year%100 != 0) && (DA_Year%4 == 0))) {
+                                DA_Offsets[1]=29;                     // leap year: Feb=29 days
+                            }
+                            DA_Work=Math.floor((DA_Year - 1581) *5/4);
+                            for (DA_ix1=1700; DA_ix1< DA_Year; DA_ix1=DA_ix1+100) {
+                                if (DA_ix1%400 != 0) { DA_Work+=6; }
+                            }
+                            DA_Work+=4;
+                            DA_Work=DA_Work%7;                      // day year begins (Sun-Sat)
+                            for (DA_ix1=0; DA_ix1< DA_Month; DA_ix1++) {
+                                DA_Work+=DA_Offsets[DA_ix1];
+                            }
+                            DA_Work=DA_Work%7;                      // day month begins
+                            DA_Work+=DA_Date*1-1;
+                            DA_Day=DA_Work%7;                       // day of target date
+                            return DA_Day;
+                            } // GetDay
+          
+                            function DisplayIt() {
+                            Now=new Date();
+                            NowSplit();
+                            Result ='';
+                            Result+=Day_Name+' | '+Now_Y+' '+Month_Name+' '+Now_D;
+                            Result+=' | '+Now_H12+':'+Now_N+' '+Now_A;
+                            Now_OH=Now_O/60;                        // minutes to hours;
+                                if (document.getElementById) {
+                                SL=document.getElementById('TimeDisplay');
+                                SL.innerHTML=Result;
+                                SL_delay=1000;                        // delay in milliseconds
+                                SL_timeout=setTimeout("DisplayIt();",SL_delay);
+                            }
+                            return true;
+                            }           
+                            DisplayIt();
+          
+                        // End hiding -->
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 d-flex align-items-center form-group" >                    
+                    <%--<div class="row col-md-12 col-xl-12 col-sm-12 col-lg-12" >--%>
+                        <asp:Image ID="imgLogo" runat="server" ImageUrl="~/Media/Images/master_toshiba-logo.png" />&nbsp;&emsp;&nbsp;
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/Media/Images/vline_header_separator.gif"/>
+                    <%--</div>--%> 
+                </div>                            
+                <div class="col-md-6 col-lg-7 col-xl-7 col-sm-6">    
+                    <div class="h1"></div>        
+                    <div class="row col-md-12">
+                        <asp:Label ID="lblmastertitle" CssClass="lblTitle text-dark" runat="server" ></asp:Label>
+                    </div>
+                    <div class="row col-md-12" >
+                        <i class="fa fa-user-circle text-primary"></i> &nbsp; <asp:Label ID="lblUser" CssClass="lblUser text-primary" runat="server">Welcome</asp:Label>
+                    </div>
+                    <br />
+                </div>
+                <div class="col-lg-3 col-sm-3 col-md-3 col-xl-3 text-right">
+                    <br />
+                    <br />
+                    <div class="form-group">
+                        <div class="input-group input-group-sm">                            
+                            <asp:TextBox ID="txtSearch" runat="server" placeholder="Search....." CssClass="form-control"></asp:TextBox>
+                            <div class="input-group-append">
+                                <asp:LinkButton ID="lbtnSearch" runat="server" CssClass="btn btn-secondary" OnClick="lbtnSearch_Click" >
+                                    <i class="fa fa-search"></i>
+                                </asp:LinkButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-collapse">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#divCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="divCollapse">
+                    <a class="navbar-brand text-light" href="#">
+                        <i class="fa fa-database"></i>
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="one-ddheader">
+                            <a class="nav-link text-light" href="<%= Page.ResolveUrl("~/Default.aspx") %>"><i class="fa fa-home"></i>&nbsp; Home &nbsp;</a>
+                        </li>
+                        <%--<li class="nav-item dropdown" id="two-ddheader">
+                            <a class="nav-link dropdown-toggle text-light" href="#" data-toggle="dropdown" id="menu2"><i class="fa fa-edit"></i>&nbsp; PJ Registration &nbsp;</a>
+                            <div class="dropdown-menu text-dark">
+                                <a class="dropdown-item" href="<%= Page.ResolveUrl("~/PageTransaction/MIRegistration.aspx") %>"><i class="fa fa-keyboard"></i>&nbsp; DMAIC &nbsp;</a>                               
+                            </div>
+                        </li> --%>
+                        <li class="nav-item" id="two-ddheader">
+                            <a class="nav-link text-light" href="<%= Page.ResolveUrl("~/PageTransaction/Registration.aspx") %>"><i class="fa fa-edit"></i> Damage </a>
+                        </li>                      
+                        <%--<li class="nav-item" id="three-ddheader">
+                            <a class="nav-link text-light" href="<%= Page.ResolveUrl("~/PageView/ViewRecords.aspx?user=requestor") %>"><i class="fa fa-eye"></i> Requestor's View </a>
+                        </li>
+                        <li class="nav-item" id="four-ddheader">
+                            <a class="nav-link text-light" href="<%= Page.ResolveUrl("~/PageView/ViewRecords.aspx?user=approver") %>"><i class="fa fa-eye"></i> Approver's View </a>
+                        </li>--%>
+                        <li class="nav-item dropdown" id="six-ddheader">
+                            <a class="nav-link text-light" href="<%= Page.ResolveUrl("~/PageView/ViewRecords.aspx") %>"><i class="fa fa-eye"></i>&nbsp; Reports &nbsp;</a>
+                        </li>
+                        <li class="nav-item dropdown" id="five-ddheader">
+                            <a class="nav-link dropdown-toggle text-light" href="#" data-toggle="dropdown" id="menu6"><i class="fa fa-cog fa-spin"></i>&nbsp; LOV Maintenance &nbsp;</a>
+                            <div class="dropdown-menu text-dark">
+                                <a class="dropdown-item" href="<%= Page.ResolveUrl("~/PageAdmin/Maintenance.aspx") %>"><i class="fa fa-list"></i>&nbsp; LOV Maintenace &nbsp;</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br />
+        <div class="container-fluid">            
+            <asp:UpdatePanel ID="upMainBody" runat="server">
+                <ContentTemplate>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </ContentTemplate>
+            </asp:UpdatePanel>
+            <asp:UpdateProgress AssociatedUpdatePanelID="upMainBody" ID="uProgress1" runat="server" DynamicLayout="true">
+            </asp:UpdateProgress>
+            <div id="divMainLoading" runat="server" class="container-fluid mt-1" >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="row" style="width: auto">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 align-self-center text-center">
+                                    <span class="text-center text-info font-weight-bold text-lg-center"> P l e a s e &nbsp; W a i t . . . </span>
+                                    <br />
+                                    <i class="fa fa-cog fa-spin fa-5x slow-spin text-dark" aria-hidden="true"> </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+            <ajax:ModalPopupExtender ID="mpMainLoadingBox" runat="server" BackgroundCssClass="msgmodalBackground"
+                TargetControlID="uProgress1" PopupControlID="divMainLoading"  PopupDragHandleControlID="caption" RepositionMode="RepositionOnWindowResize" >
+            </ajax:ModalPopupExtender>
+
+        </div>
+        <br />            
+        
+        <div class="col-md-12 text-left bg-dark h-100 text-light">
+                <br />
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        <div class="row">
+                            <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <asp:LinkButton ID="lbtnSystemInfoicon" CssClass="lnkBtn lnkBtn-Footer" runat="server" OnClick="lbtnSystemInfo_Click"><i class="fa fa-info-circle fa-2x"></i></asp:LinkButton>
+                            </div>
+                            <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 align-text-top">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 align-text-top">
+                                        <asp:LinkButton ID="lbtnSystemInfo" CssClass="lnkBtn lnkBtn-Footer" runat="server" OnClick="lbtnSystemInfo_Click">SYSTEM INFORMATION</asp:LinkButton>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 align-text-top">
+                                        <label class="small">Aims to support operations by giving the information regarding the system</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        <div class="row">
+                            <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <asp:LinkButton ID="lbntFeedBackicon" CssClass="lnkBtn lnkBtn-Footer" runat="server"  OnClick="lbtnFeedBack_Click"><i class="fa fa-comment-alt fa-2x"></i></asp:LinkButton>
+                            </div>
+                             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 align-text-top">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 align-text-top">
+                                        <asp:LinkButton ID="lbntFeedBack" CssClass="lnkBtn lnkBtn-Footer" runat="server" OnClick="lbtnFeedBack_Click">FEEDBACK</asp:LinkButton>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 align-text-top">
+                                        <label class="small">Please give us feedbacks for our website by filing out the form</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        <div class="row">
+                            <div class="col-sm-1 col-md-1 col-lg-1  col-xl-1">
+                                <asp:LinkButton ID="lbtnCreatorIcon" CssClass="lnkBtn lnkBtn-Footer" runat="server"  OnClick="lbtnCreator_Click"><i class="fa fa-tags fa-2x"></i></asp:LinkButton>
+                            </div>                            
+                             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 align-text-top">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 align-text-top">
+                                        <asp:LinkButton ID="lbtnCreator" CssClass="lnkBtn lnkBtn-Footer" runat="server" OnClick="lbtnCreator_Click">CREATED BY</asp:LinkButton>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 align-text-top">                                
+                                        <label class="small">IS3 - Portal Development Group</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        <div class="row">
+                            <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                                <asp:LinkButton ID="LinkButton5" CssClass="lnkBtn lnkBtn-Footer" runat="server"><i class="fa fa-copyright fa-2x"></i></asp:LinkButton>
+                            </div>
+                             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 align-text-top">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 align-text-top">
+                                        <asp:LinkButton ID="LinkButton4" CssClass="lnkBtn lnkBtn-Footer" runat="server">COPYRIGHT</asp:LinkButton>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 align-text-top">
+                                        <label class="small"><script type="text/javascript">document.write(new Date().getFullYear())</script> Information Systems Department. All Rights Reserved</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </div>  
+
+        <script type="text/javascript">
+            Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(showPopup1); 
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(hidePopup1);    
+
+            function showPopup1(sender, args){
+                var ModalControl ='<%= mpMainLoadingBox.ClientID %>';   
+                $find(ModalControl).show();        
+            } 
+
+            function hidePopup1(sender, args) { 
+                var ModalControl ='<%= mpMainLoadingBox.ClientID %>'; 
+                $find(ModalControl).hide(); 
+            } 
+        </script>
+
+    </form>
+    <script src='<%= Page.ResolveUrl("~/Media/JavaScript/RightClick.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/Media/JavaScript/jquery-2.2.4.min.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/Media/JavaScript/popper.min.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/Media/JavaScript/fontawesome.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/Media/JavaScript/bootstrap.min.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/Media/JavaScript/footable.min.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/Media/JavaScript/site.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/Media/JavaScript/jquery-ui.min.js")%>'></script>
+    <script src='<%= Page.ResolveUrl("~/Media/JavaScript/jquery.dataTables.min.js")%>' type="text/javascript"></script>
+    
+</body>
+</html>
